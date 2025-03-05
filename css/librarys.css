@@ -1,0 +1,299 @@
+/* Reset body margin and padding */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+
+}
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8B0000; /* Dark Red background */
+  padding: 10px 20px;
+  color: rgb(255, 255, 255); /* White text color */
+  font-size: 25px;
+  margin: 0; /* Remove margin around header */
+}
+/* Logo Section in the Header */
+header .logo img {
+  max-height: 80px; /* Adjust this value based on header height */
+}
+/* Navigation Links */
+header nav {
+  margin-left: auto; /* Pushes the navigation links to the right */
+}
+header nav ul {
+  list-style: none; /* Removes bullet points from list */
+  display: flex; /* Displays list items in a row */
+}
+/* Individual List Items */
+header nav ul li {
+  margin-right: 30px; /* Space between menu items */
+}
+/* Links in Navigation */
+header nav ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: rgb(255, 255, 255); /* White text color */
+  font-weight: bold;
+}
+/* Hover Effect on Links */
+header nav ul li a:hover {
+  color: rgb(0, 0, 0); /* Changes text color to black when hovered */
+}
+/* User Icon & Dropdown Placeholder */
+.login-circle {
+  position: relative;
+}
+.user-icon {
+  width: 90px;
+  height: 75px;
+  background-color: #fff; /* White circle as placeholder for user icon */
+  border-radius: 50%; /* Makes the placeholder a circle */
+  cursor: pointer; /* Changes cursor to pointer (clickable) */
+}
+    /* Main container */
+/* Main container */
+main {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+#pageContainer {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* Each page style */
+.page {
+  display: none;
+}
+.page.active {
+  display: flex;
+}
+/* Picture area */
+.page-image {
+  /* Adjust width for the image section */
+  width: 50%;
+  height: 100%;
+}
+.page-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+/* Thumbnail version of the image */
+.page-image-thumbnail {
+  display: none;  /* Hide thumbnail on desktop */
+}
+/* Fullscreen pop-up effect */
+.page-image-fullscreen {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Show fullscreen image and hide thumbnail on hover */
+.page-image:hover .page-image-fullscreen {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 70vh;
+  z-index: 9999;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+/* Add overlay when hovering */
+.page-image:hover::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9998;
+}
+/* Ensure the hovered image stays above the overlay */
+.page-image:hover .page-image-fullscreen {
+  z-index: 9999;
+  background-size: cover;
+  background-position: center;
+}
+/* Optional: Add cursor pointer */
+.page-image {
+  cursor: pointer;
+}
+/* Optional: Add smooth transition back */
+.page-image-fullscreen {
+  transition: all 0.3s ease-in-out;
+}
+.page-image:hover .page-image-thumbnail {
+  opacity: 0;
+  visibility: hidden;
+}
+/* Content area */
+.page-content {
+  /* Style the content section */
+  width: 50%;
+  padding: 20px 40px;
+}
+/* Event title */
+.event-title {
+  font-size: 3em; /* Larger font */
+  font-weight: bold; /* Bold */
+  margin: 0; /* Remove extra space */
+}
+/* Event location */
+.event-location {
+  font-size: 1.5em; /* Slightly smaller than title */
+  color: #555; /* Gray text */
+  margin: 0.3em 0; /* Small space below title */
+}
+/* Event description */
+.event-description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: black; /* Black text */
+  text-indent: 2em; /* Paragraph indentation */
+  margin-top: 1em;
+}
+/* Buttons */
+.event-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 1em;
+}
+.button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Navigation arrows */
+.nav-arrows {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+.nav-arrow {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5em;
+  transition: background-color 0.3s;
+}
+.nav-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Footer Section */
+footer {
+background-color: #8B0000; /* #C72C41 */
+color: rgb(255, 255, 255); /* #fff */
+padding: 20px 0;
+text-align: center;
+width: 100%;
+/* Stick the footer to the bottom */
+margin-top: auto;
+}
+.footer-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.footer-content p {
+margin-bottom: 10px;
+}
+.footer-links {
+margin-top: 10px;
+}
+.footer-links a {
+color: rgb(0, 0, 0); 
+text-decoration: none;
+margin: 0 10px;
+}
+.footer-links a:hover {
+text-decoration: underline;
+}
+.view-more {
+display: block;
+margin-top: 20px;
+color: blue;
+text-decoration: none;
+}
+h1 {
+font-size: 28px;
+margin-bottom: 40px;
+}
+.location-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.location-btn:hover {
+  background-color: #0056b3;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 640px;
+}
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: black;
+}

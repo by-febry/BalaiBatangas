@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: rgb(244, 244, 244); /* #f4f4f4 */
+  color: rgb(51, 51, 51); /* #333 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8B0000; /* Dark Red background */
+  padding: 10px 20px;
+  color: rgb(255, 255, 255); /* White text color */
+  font-size: 25px;
+}
+
+/* Logo Section */
+header .logo img {
+  max-height: 50px;
+  margin-top: 10px;
+}
+
+/* Navigation Links */
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-right: 30px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: rgb(0, 0, 0); /* Change text color to black when hovered */
+}
+
+/* Circular Profile Picture or Default Circle */
+.user-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      color: #333;
+      border: 2px solid #333;
+  }
+
+  /* Dropdown menu styling */
+  .user-menu {
+      position: relative;
+      display: inline-block;
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+
+  .dropdown-content a,p {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+
+  .dropdown-content a:hover {
+      background-color: #f1f1f1;
+  }
+
+  .user-menu:hover .dropdown-content {
+      display: block;
+  }
+
+  /* Username styling under the circle */
+  .user-name {
+      text-align: center;
+      font-size: 12px;
+      color: #333;
+  }
+
+
+/* Footer Section */
+footer {
+  background-color: #8B0000;
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* Ensure it stays at the bottom */
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgb(0, 0, 0); 
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Main Content Styling */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.product-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Availability Section */
+.availability {
+  font-weight: bold;
+  color: green;
+}
+
+/* Buying Section */
+.buying-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.buying-section label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#quantity {
+  width: 80px;
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.buy-button:hover {
+  background-color: #C72C41;
+}

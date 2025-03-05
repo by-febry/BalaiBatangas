@@ -1,0 +1,263 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: rgb(244, 244, 244); /* #f4f4f4 */
+  color: rgb(51, 51, 51); /* #333 */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper for content */
+.wrapper {
+  flex: 1; /* Allows the wrapper to grow and fill the available space */
+}
+
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8B0000; /* Dark Red background */
+  padding: 10px 20px;
+  color: rgb(255, 255, 255); /* White text color */
+  font-size: 25px;
+}
+
+/* Logo Section in the Header */
+header .logo img {
+  max-height: 80px;  /* Adjust this value based on header height */
+}
+
+/* Navigation Links */
+header nav {
+  margin-left: auto; /* Pushes the navigation links to the right */
+}
+
+header nav ul {
+  list-style: none;   /* Removes bullet points from list */
+  display: flex;      /* Displays list items in a row */
+}
+
+/* Individual List Items */
+header nav ul li {
+  margin-right: 30px; /* Space between menu items */
+}
+
+/* Links in Navigation */
+header nav ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: rgb(255, 255, 255); /* White text color */
+  font-weight: bold;
+}
+
+/* Hover Effect on Links */
+header nav ul li a:hover {
+  color: rgb(0, 0, 0); /* Changes text color to black when hovered */
+}
+
+
+
+
+/* Container for each image */
+.image-item {
+  width: 300px;
+  background-color: rgb(255, 255, 255); /* Container box background */
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Image Gallery Layout */
+.image-gallery {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.image-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: rgb(51, 51, 51); /* Title color */
+}
+
+/* Button Styling */
+.view-more-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.view-more-btn {
+  padding: 10px 20px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.view-more-btn:hover {
+  background-color: #a62b2b; /* Slightly lighter red on hover */
+}
+
+/* Footer Section */
+footer {
+  background-color: #8B0000; /* #C72C41 */
+  color: rgb(255, 255, 255); /* #fff */
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  /* Stick the footer to the bottom */
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: rgb(0, 0, 0); 
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Dashboard Main Section */
+main {
+  text-align: center;
+  padding: 40px;
+  flex: 1; /* Allows main content to expand */
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  padding: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.username {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* Image Upload Form */
+.upload-form {
+  margin-top: 10px;
+}
+
+.upload-form input[type="file"] {
+  display: none;
+}
+
+.upload-label {
+  padding: 10px;
+  background-color: #8B0000;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.upload-label:hover {
+  background-color: #A52A2A;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  background-color: #D3D3D3;
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-content h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.dashboard-content a {
+  text-decoration: none;
+  color: #8B0000;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.dashboard-content a:hover {
+  text-decoration: underline;
+}
+
+
+.login-circle {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-icon {
+  /* Adjust styles for the default icon or profile image here */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc; /* Default background for empty user icon */
+}
+

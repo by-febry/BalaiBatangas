@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: rgb(244, 244, 244); /* #f4f4f4 */
+  color: rgb(51, 51, 51); /* #333 */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper for content */
+.wrapper {
+  flex: 1; /* Allows the wrapper to grow and fill the available space */
+}
+
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8B0000; /* Dark Red background */
+  padding: 10px 20px;
+  color: rgb(255, 255, 255); /* White text color */
+  font-size: 25px;
+}
+
+/* Logo Section in the Header */
+header .logo img {
+  max-height: 80px;  /* Adjust this value based on header height */
+}
+
+/* Navigation Links */
+header nav {
+  margin-left: auto; /* Pushes the navigation links to the right */
+}
+
+header nav ul {
+  list-style: none;   /* Removes bullet points from list */
+  display: flex;      /* Displays list items in a row */
+}
+
+/* Individual List Items */
+header nav ul li {
+  margin-right: 30px; /* Space between menu items */
+}
+
+/* Links in Navigation */
+header nav ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: rgb(255, 255, 255); /* White text color */
+  font-weight: bold;
+}
+
+/* Hover Effect on Links */
+header nav ul li a:hover {
+  color: rgb(0, 0, 0); /* Changes text color to black when hovered */
+}
+
+/* User Icon & Dropdown Placeholder */
+.login-circle {
+  position: relative;
+}
+
+.user-icon {
+  width: 90px;
+  height: 75px;
+  background-color: #fff; /* Remove this if you always want to show an image */
+  background-size: cover; /* Ensure the image covers the entire circle */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  border-radius: 50%; /* Makes the placeholder a circle */
+  cursor: pointer; /* Changes cursor to pointer (clickable) */
+}
+
+/* Footer Section */
+footer {
+  background-color: #8B0000; /* #C72C41 */
+  color: rgb(255, 255, 255); /* #fff */
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  /* Stick the footer to the bottom */
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: rgb(0, 0, 0); 
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* Main Content Styling */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.product-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Availability Section */
+.availability {
+  font-weight: bold;
+  color: green;
+}
+
+/* Buying Section */
+.buying-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.buying-section label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#quantity {
+  width: 80px;
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.buy-button:hover {
+  background-color: #C72C41;
+}

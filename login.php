@@ -3,7 +3,7 @@
 include 'connection.php';
 
 // Your secret key from Google reCAPTCHA
-$secretKey = "6LeOP2AqAAAAABbaTFsAFx7eXSc8-LAfc4clfw0X";
+$secretKey = "secret key";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verify CAPTCHA response
